@@ -5,6 +5,7 @@ def is_correct_number(n):
     #Check if n is not divisible by 2 and n is greater than 0
     return (((n%2) != 0) and (n > 0))
 
+
 def create_empty_square(n):
     #Returns list of nested lists with zeros as place holder
     square = []
@@ -14,6 +15,7 @@ def create_empty_square(n):
         for column in range(n):
             square[row].append(0)
     return square
+
 
 def build_magic_square(n, square):
     magic_square = square
@@ -35,19 +37,47 @@ def build_magic_square(n, square):
 
     return magic_square
 
+
 def print_magic_square(square):
     output = ""
     for row in square:
         for col in row:
-            print(str(col), end="|")
+            print(str(col), end="  ")
 
         print()
 
+
 def verify_magic_square(square):
-    return False
+    print("Correct")
+
+
+def get_input():
+    return int(input("Enter an odd integer: "))
+
+
+def show_error():
+    print("Please make sure you entered a positive odd integer ^_^")
+
 
 def main():
-    print(":P")
+    n = 0
+    done = False
+    while not done:
+        n = get_input()
+        
+        if (is_correct_number(n)):
+            square = create_empty_square(n)
+            magic_square = build_magic_square(n, square)
+            verify_magic_square(square)
+            print_magic_square(magic_square)
+            done = True
+        else:
+            if (n == 0000): #Secret exit code
+                print("Bye :D")
+                break
+            show_error()
+
+    return 0
 
 if __name__ == "__main__":
     main()
