@@ -43,7 +43,7 @@ def print_magic_square(square):
     output = ""
     for row in square:
         for col in row:
-            print(str(col), end="  ")
+            print(str(col), end=" ")
         print()
 
 
