@@ -45,3 +45,9 @@ def print_magic_square(square):
 
 def verify_magic_square(square):
     return False
+
+def main():
+    print(":P")
+
+if __name__ == "__main__":
+    main()
