@@ -4,7 +4,7 @@ This python script generates a magic square of n x n where the sum of all rows a
 
 First clone the project: `git clone git@github.com:a-t-h-i/Magic-Square.git`
 
-Then cd to the cloned project by running: `cd Football-Stats`
+Then cd to the cloned project by running: `cd Magic-Square`
 
 From the project root directory you can run this script by using: `python3 square.py`
 
