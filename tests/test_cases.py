@@ -20,13 +20,17 @@ class test_square(unittest.TestCase):
         self.assertEqual(expected, sq.create_empty_square(3))
         self.assertEqual(3, len(sq.create_empty_square(3)))
 
-
     def test_verify_square(self):
         self.assertTrue(True)
 
     def test_magic_square(self):
         square = sq.create_empty_square(3)
         magic_square = sq.build_magic_square(3,square)
-        self.assertEqual(1,1)
+        
+        expected = [[2, 7, 6], 
+                    [9, 5, 1], 
+                    [4, 3, 8]]
+
+        self.assertEqual(expected,magic_square)
 
 
