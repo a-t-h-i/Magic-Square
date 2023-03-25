@@ -21,7 +21,8 @@ class test_square(unittest.TestCase):
         self.assertEqual(3, len(sq.create_empty_square(3)))
 
     def test_verify_square(self):
-        self.assertTrue(True)
+        square = sq.build_magic_square(3,sq.create_empty_square(3))
+        self.assertTrue(sq.check_magic_square(square))
 
     def test_magic_square(self):
         square = sq.create_empty_square(3)
