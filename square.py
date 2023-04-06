@@ -97,7 +97,7 @@ def main():
                 break
             show_error()
 
-    return 0
+    return 1
 
 if __name__ == "__main__":
     main()
